@@ -7,8 +7,8 @@
 /* ─── VARIABLES ─── */
 
 :root {
-    --pink: #f800c2;
-    --pink-light: #f800c2;
+    --pink: #9f45b0;
+    --pink-light: #e54ed0;
     --pink-dark: #6a2d78;
     --black: #000000;
     --black-2: #0a0a0a;
@@ -2522,9 +2522,9 @@ footer span {
 
 .apc-img {
     width: 100%;
-    height: 280px;
+    height: 320px;
     object-fit: cover;
-    object-position: center top;
+    object-position: center 25%;
     display: block;
     transition: transform 0.5s ease;
 }
@@ -3037,10 +3037,11 @@ footer span {
         text-align: center;
     }
     .apc-img {
-        height: 240px;
+        height: 280px;
+        object-position: center 25%;
     }
     .apc-initials {
-        height: 240px;
+        height: 280px;
     }
     .apc-socials {
         justify-content: center;
@@ -3056,10 +3057,11 @@ footer span {
         text-align: center;
     }
     .apc-img {
-        height: 200px;
+        height: 250px;
+        object-position: center 25%;
     }
     .apc-initials {
-        height: 200px;
+        height: 250px;
         font-size: 3rem;
     }
     .apc-socials {
