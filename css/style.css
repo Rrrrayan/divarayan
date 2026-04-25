@@ -2254,18 +2254,28 @@ footer span {
 
 /* ─── RESPONSIVE ─── */
 
+
+/* ── 1024px ── */
+
 @media(max-width:1024px) {
     .contact-grid {
         grid-template-columns: 1fr
     }
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr)
+    }
 }
 
+
+/* ── 900px ── */
+
 @media(max-width:900px) {
+    /* Hero */
     .hero-inner {
         grid-template-columns: 1fr;
         text-align: center;
         padding: 5rem 1.5rem 2rem;
-        gap: 3rem
+        gap: 2rem
     }
     .hero-image-col {
         order: -1
@@ -2273,22 +2283,21 @@ footer span {
     .hero-badge {
         margin: 0 auto
     }
-    .hero-desc {
-        max-width: 100%
-    }
     .hero-stats {
         justify-content: center
     }
     .hero-btns {
-        justify-content: center
+        justify-content: center;
+        flex-wrap: wrap
     }
     .hero-img-frame {
-        width: 280px;
-        height: 340px
+        width: 260px;
+        height: 320px;
+        margin: 0 auto
     }
     .hero-img-inner {
-        width: 220px;
-        height: 268px
+        width: 200px;
+        height: 248px
     }
     .badge-exp {
         left: -5px;
@@ -2298,26 +2307,67 @@ footer span {
         right: -5px;
         top: 20px
     }
-    .hero-terminal-name {
-        font-size: .7rem
+    .hn-first,
+    .hn-last {
+        font-size: clamp(2.4rem, 8vw, 4rem)
+    }
+    /* About */
+    .about-top {
+        grid-template-columns: 1fr;
+        gap: 1.5rem
+    }
+    .about-photo-card {
+        text-align: center;
+        max-width: 400px;
+        margin: 0 auto;
+        width: 100%
+    }
+    .apc-img {
+        height: 300px;
+        object-position: center 25%
+    }
+    .apc-initials {
+        height: 300px
+    }
+    .apc-socials {
+        justify-content: center
+    }
+    .about-chips {
+        grid-template-columns: repeat(2, 1fr)
+    }
+    /* Skills */
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr)
+    }
+    /* Timeline */
+    .timeline::before {
+        left: 20px
+    }
+    .timeline-dot {
+        left: 20px
     }
 }
 
+
+/* ── 768px ── */
+
 @media(max-width:768px) {
+    /* Nav */
     nav {
-        padding: .8rem 1.5rem
+        padding: .8rem 1.2rem
     }
     .nav-links {
         display: none;
         flex-direction: column;
         position: fixed;
-        top: 66px;
+        top: 60px;
         left: 0;
         right: 0;
         background: var(--black-2);
-        padding: 2rem;
-        gap: 1.5rem;
-        border-bottom: 1px solid var(--border)
+        padding: 1.5rem;
+        gap: 1.2rem;
+        border-bottom: 1px solid var(--border);
+        z-index: 999
     }
     .nav-links.open {
         display: flex
@@ -2325,42 +2375,227 @@ footer span {
     .hamburger {
         display: flex
     }
+    /* Sections */
     .section-wrapper {
-        padding: 4rem 1.5rem
+        padding: 3.5rem 1.2rem
     }
+    .section-title {
+        font-size: clamp(1.8rem, 6vw, 2.8rem)
+    }
+    /* Hero */
+    .hero-inner {
+        padding: 4.5rem 1.2rem 2rem
+    }
+    .hero-img-frame {
+        width: 230px;
+        height: 280px
+    }
+    .hero-img-inner {
+        width: 175px;
+        height: 215px
+    }
+    .orbit-dot {
+        width: 36px;
+        height: 36px;
+        font-size: .7rem
+    }
+    .hero-stats {
+        gap: 1rem
+    }
+    .stat-item {
+        padding: .5rem .8rem
+    }
+    /* About */
+    .about-bio-heading {
+        font-size: 1.1rem
+    }
+    .about-bio-text p {
+        font-size: .9rem
+    }
+    .about-chips {
+        grid-template-columns: repeat(2, 1fr);
+        gap: .6rem
+    }
+    .chip-num {
+        font-size: 1.2rem
+    }
+    .about-info-rows {
+        font-size: .7rem
+    }
+    .air-row {
+        padding: .6rem .9rem;
+        gap: .6rem
+    }
+    .air-key {
+        min-width: 60px
+    }
+    /* Bash */
+    .bash-window {
+        font-size: .72rem
+    }
+    .bash-body {
+        min-height: 200px;
+        max-height: 260px;
+        padding: .8rem
+    }
+    .bash-title {
+        display: none
+    }
+    .bt-label {
+        min-width: 9rem
+    }
+    .bt-bar-track {
+        width: 70px
+    }
+    /* Skills */
+    .skill-card {
+        padding: 1.4rem 1rem
+    }
+    /* Timeline */
     .timeline::before {
         left: 20px
     }
     .timeline-dot {
         left: 20px
     }
-    .bash-body {
-        padding: 1rem
+    .timeline-content {
+        margin-left: 3rem
     }
-    .bash-window {
-        font-size: .75rem
+    /* Contact */
+    .contact-form {
+        padding: 1.5rem 1.2rem
     }
 }
 
+
+/* ── 480px ── */
+
 @media(max-width:480px) {
+    /* Hero */
+    .hero-inner {
+        padding: 4rem 1rem 1.5rem
+    }
     .hero-img-frame {
-        width: 240px;
-        height: 300px
+        width: 200px;
+        height: 248px
     }
     .hero-img-inner {
-        width: 190px;
-        height: 235px
+        width: 155px;
+        height: 192px
     }
     .hero-btns {
         flex-direction: column;
-        align-items: center
+        align-items: stretch;
+        gap: .7rem
     }
     .btn {
         width: 100%;
         justify-content: center
     }
+    .hero-stats {
+        flex-wrap: wrap;
+        gap: .7rem
+    }
+    .stat-item {
+        flex: 1;
+        min-width: 80px;
+        text-align: center
+    }
+    /* About */
+    .about-photo-card {
+        max-width: 100%
+    }
+    .apc-img {
+        height: 260px
+    }
+    .apc-initials {
+        height: 260px
+    }
+    .apc-socials {
+        gap: .5rem
+    }
+    .apc-soc {
+        width: 38px;
+        height: 38px
+    }
+    .about-chips {
+        grid-template-columns: repeat(2, 1fr);
+        gap: .5rem
+    }
+    .about-chip {
+        padding: .7rem .5rem
+    }
+    .chip-num {
+        font-size: 1.1rem
+    }
+    .chip-lbl {
+        font-size: .55rem
+    }
+    /* Bash */
+    .bash-window {
+        font-size: .68rem
+    }
+    .bash-body {
+        min-height: 180px;
+        max-height: 240px;
+        padding: .7rem
+    }
+    .bt-label {
+        min-width: 7rem;
+        font-size: .68rem
+    }
     .bt-bar-track {
-        width: 50px
+        width: 55px
+    }
+    .bt-pct {
+        font-size: .65rem;
+        min-width: 2rem
+    }
+    /* Skills */
+    .skills-grid {
+        grid-template-columns: 1fr
+    }
+    /* Section */
+    .section-wrapper {
+        padding: 3rem .9rem
+    }
+    /* Contact form */
+    .form-group input,
+    .form-group textarea {
+        font-size: .85rem;
+        padding: .7rem .9rem
+    }
+}
+
+
+/* ── 360px (very small phones) ── */
+
+@media(max-width:360px) {
+    .hero-img-frame {
+        width: 175px;
+        height: 215px
+    }
+    .hero-img-inner {
+        width: 135px;
+        height: 168px
+    }
+    .hero-name-soft {
+        font-size: 2.2rem
+    }
+    .apc-img {
+        height: 230px
+    }
+    .about-chips {
+        grid-template-columns: repeat(2, 1fr)
+    }
+    .bash-body {
+        font-size: .65rem
+    }
+    .bt-bar-track {
+        width: 45px
+    }
+    .bt-label {
+        min-width: 6rem
     }
 }
 
@@ -3027,58 +3262,3 @@ footer span {
 
 
 /* ── Responsive ── */
-
-@media (max-width: 900px) {
-    .about-top {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    .about-photo-card {
-        text-align: center;
-    }
-    .apc-img {
-        height: 280px;
-        object-position: center 25%;
-    }
-    .apc-initials {
-        height: 280px;
-    }
-    .apc-socials {
-        justify-content: center;
-    }
-    .about-chips {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 600px) {
-    .about-photo-card {
-        flex-direction: column;
-        text-align: center;
-    }
-    .apc-img {
-        height: 250px;
-        object-position: center 25%;
-    }
-    .apc-initials {
-        height: 250px;
-        font-size: 3rem;
-    }
-    .apc-socials {
-        justify-content: center;
-    }
-    .about-chips {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .bash-body {
-        min-height: 220px;
-        max-height: 280px;
-        font-size: 0.72rem;
-    }
-    .bt-label {
-        min-width: 9rem;
-    }
-    .bt-bar-track {
-        width: 70px;
-    }
-}
