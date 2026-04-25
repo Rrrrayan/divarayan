@@ -1372,7 +1372,8 @@ section {
 .section-wrapper {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 6rem 3rem
+    padding: 6rem 3rem;
+    overflow-x: hidden
 }
 
 .section-header {
@@ -2311,16 +2312,20 @@ footer span {
     .hn-last {
         font-size: clamp(2.4rem, 8vw, 4rem)
     }
-    /* About */
+    /* About — FORCE single column */
     .about-top {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
         gap: 1.5rem
     }
     .about-photo-card {
         text-align: center;
-        max-width: 400px;
+        max-width: 420px;
         margin: 0 auto;
         width: 100%
+    }
+    .about-bio-col {
+        width: 100%;
+        min-width: 0
     }
     .apc-img {
         height: 300px;
@@ -2334,6 +2339,9 @@ footer span {
     }
     .about-chips {
         grid-template-columns: repeat(2, 1fr)
+    }
+    .about-info-rows {
+        width: 100%
     }
     /* Skills */
     .skills-grid {
@@ -2724,6 +2732,8 @@ footer span {
     gap: 3rem;
     align-items: start;
     margin-bottom: 3rem;
+    width: 100%;
+    overflow: hidden;
 }
 
 
@@ -2845,6 +2855,7 @@ footer span {
 /* Bio column */
 
 .about-bio-col {
+    min-width: 0;
     display: flex;
     flex-direction: column;
     gap: 1.8rem;
@@ -3259,6 +3270,3 @@ footer span {
 .bt-eq {
     color: #ff7b72;
 }
-
-
-/* ── Responsive ── */
