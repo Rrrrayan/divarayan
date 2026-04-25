@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rayan Hussein — Developer & IT Consultant</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+</head>
+
+<body>
+
+    <!-- LOADER -->
+    <div id="loader">
+        <div class="loader-logo">RH</div>
+        <div class="loader-ring"></div>
+        <div class="loader-bar-wrap">
+            <div class="loader-bar">
+                <div class="loader-bar-fill"></div>
+            </div>
+            <span class="loader-pct" id="loaderPct">0%</span>
+        </div>
+    </div>
+
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+    <canvas id="bg-canvas"></canvas>
+    <div class="symbols-bg"></div>
+
+    <!-- NAV -->
+    <nav id="mainNav">
+        <a href="#home" class="nav-logo">
+            <svg width="38" height="38" viewBox="0 0 38 38" fill="none">
+      <rect width="38" height="38" rx="9" fill="rgba(255,45,120,0.1)" stroke="rgba(255,45,120,0.4)" stroke-width="1"/>
+      <text x="19" y="25" font-family="Orbitron,monospace" font-weight="900" font-size="13" fill="#ff2d78" text-anchor="middle">RH</text>
+    </svg>
+        </a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-right">
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+      <svg class="icon-moon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="icon-sun" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/></svg>
+      <span class="toggle-knob"></span>
+    </button>
+            <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="home">
+        <div class="hero-grid"></div>
+        <div class="hero-orb orb-1"></div>
+        <div class="hero-orb orb-2"></div>
+
+        <div class="hero-inner">
+            <!-- TEXT -->
+            <div class="hero-text-col">
+
+                <!-- SOFT ANIMATED NAME -->
+                <div class="hero-name-wrap">
+                    <h1 class="hero-name-soft">
+                        <span class="hn-first">Rayan</span>
+                        <span class="hn-last">Hussein</span>
+                    </h1>
+                    <div class="hn-underline"></div>
+                </div>
+
+                <div class="hero-badge"><span class="hero-badge-dot"></span>Available for Work</div>
+
+                <div class="hero-title-wrap">
+                    <span class="hero-title-label">I'm a </span>
+                    <span id="typing-text" class="hero-title-typed"></span>
+                    <span class="typing-cursor"></span>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item"><span class="stat-num">3+</span><span class="stat-label">Years Exp.</span></div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item"><span class="stat-num">20+</span><span class="stat-label">Projects</span></div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item"><span class="stat-num">2</span><span class="stat-label">Stacks</span></div>
+                </div>
+                <div class="hero-btns">
+                    <a href="#contact" class="btn btn-primary">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Hire Me
+                    </a>
+                    <a href="Rayan_Hussein_CV.pdf" download="Rayan_Hussein_CV.pdf" class="btn btn-cv" id="downloadCvBtn">
+                        <svg class="cv-dl-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+                        <span class="cv-btn-label">Download CV</span>
+                        <span class="cv-pulse"></span>
+                    </a>
+                    <a href="#skills" class="btn btn-outline">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg> View Skills
+                    </a>
+                </div>
+            </div>
+
+            <!-- PHOTO -->
+            <div class="hero-image-col">
+                <div class="hero-img-frame">
+                    <div class="img-ring ring-outer"></div>
+                    <div class="img-ring ring-mid"></div>
+                    <div class="orbit-dot dot-1" title="HTML5">
+                        <div class="orbit-icon"><svg width="20" height="20" viewBox="0 0 128 128"><path fill="#E44D26" d="M19 114L9 2h110l-10 112-45 12z"/><path fill="#F16529" d="M64 117l36-10 9-96H64z"/><path fill="#EBEBEB" d="M64 52H46l-2-14H64V25H29l4 41H64zm0 36l-16-4-1-11H34l2 22 28 8z"/><path fill="#fff" d="M64 52v14h17l-2 18-15 4v14l28-8 4-42z"/></svg></div>
+                    </div>
+                    <div class="orbit-dot dot-2" title="Flutter">
+                        <div class="orbit-icon"><svg width="20" height="20" viewBox="0 0 128 128"><path fill="#54C5F8" d="M12 64C12 49 18 35 28 25L10 6C-3 19-10 41-10 64s7 45 20 58l19-19C18 93 12 79 12 64z"/><path fill="#01579B" d="M64 12c15 0 29 6 39 16L122 9C109-3 87-10 64-10S19-3 6 10l19 19C35 18 49 12 64 12z"/><path fill="#29B6F6" d="M64 116c-15 0-29-6-39-16L6 118C19 131 41 138 64 138s45-7 58-20l-19-19C93 109 79 116 64 116z"/><path fill="#0288D1" d="M116 64c0 15-6 29-16 39l19 19C131 109 138 87 138 64S131 19 118 6l-19 19c10 10 16 24 17 39z"/><circle fill="white" cx="64" cy="64" r="28"/></svg></div>
+                    </div>
+                    <div class="orbit-dot dot-3" title="JavaScript">
+                        <div class="orbit-icon"><svg width="20" height="20" viewBox="0 0 128 128"><path fill="#F7DF1E" d="M1 1h126v126H1z"/><path fill="#323330" d="M116 97c-1-6-5-11-16-15-4-2-8-3-9-6-1-2-1-3 0-4 1-3 5-4 8-3 2 1 4 2 5 5l9-6c-1-2-2-3-3-4-3-4-8-5-15-5l-4 1c-3 1-7 3-9 5-6 7-4 18 3 23 7 6 18 7 19 12 1 6-4 8-10 7-4-1-7-3-9-6l-10 5c1 2 2 4 4 5 6 6 16 8 26 6 10-2 16-9 15-19zm-49 0c-2-8-8-11-17-15-3-1-6-3-7-5-1-2 0-3 0-4 1-3 6-4 8-3 2 1 4 2 5 4l8-5c-1-2-2-3-3-4-3-3-8-5-14-5l-4 1c-4 1-7 3-9 5-6 6-4 18 3 23 7 5 17 6 19 11 1 6-4 8-10 7-4-1-6-3-9-6l-9 5c1 2 2 4 4 5 6 6 16 8 26 6 10-2 16-9 15-19z"/></svg></div>
+                    </div>
+                    <div class="orbit-dot dot-4" title="Git">
+                        <div class="orbit-icon"><svg width="20" height="20" viewBox="0 0 128 128"><path fill="#F34F29" d="M125 58L70 3c-3-3-8-3-11 0L47 15l15 15c3-1 7 0 10 2 3 3 3 7 2 10l14 14c3-1 7 0 10 2 4 4 4 10 0 14s-10 4-14 0c-3-3-3-7-2-11L69 48v39c1 1 2 1 3 2 4 4 4 10 0 14s-10 4-14 0-4-10 0-14l3-2V48l-3-2c-3-3-4-7-2-11L41 21 3 59c-3 3-3 8 0 11l55 55c3 3 8 3 11 0l55-55c3-3 3-8 1-12z"/></svg></div>
+                    </div>
+                    <div class="hero-img-inner">
+                        <img src="assets/img/avatar.jpg" alt="Rayan Hussein" class="profile-photo" />
+                        <div class="scan-overlay"></div>
+                        <div class="scan-line"></div>
+                    </div>
+                    <div class="img-corner c-tl"></div>
+                    <div class="img-corner c-tr"></div>
+                    <div class="img-corner c-bl"></div>
+                    <div class="img-corner c-br"></div>
+                </div>
+                <div class="float-badge badge-exp">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--pink)" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                    <div><span class="fbadge-num">3+</span><span class="fbadge-txt">Yrs Exp</span></div>
+                </div>
+                <div class="float-badge badge-proj">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--pink)" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                    <div><span class="fbadge-num">20+</span><span class="fbadge-txt">Projects</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator"><span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="section-wrapper">
+            <div class="section-header reveal">
+                <span class="section-tag">// 01 — About Me</span>
+                <h2 class="section-title">Who I <span>Am</span></h2>
+                <div class="section-line"></div>
+            </div>
+
+            <!-- ── ROW 1: Photo card + Bio + Stats ── -->
+            <div class="about-top reveal">
+
+                <!-- Photo card -->
+                <div class="about-photo-card">
+                    <div class="apc-img-wrap">
+                        <img src="assets/img/profile2.jpg" alt="Rayan Hussein" class="apc-img" id="aboutPhoto" onerror="this.style.display='none';document.getElementById('aboutInitials').style.display='flex';" />
+                        <div class="apc-initials" id="aboutInitials">RH</div>
+                    </div>
+                    <div class="apc-meta">
+                        <p class="apc-name">Rayan Hussein</p>
+                        <p class="apc-title">Web &amp; Flutter Developer</p>
+                        <p class="apc-title">IT Consultant</p>
+                    </div>
+                    <div class="apc-socials">
+                        <a href="mailto:rayanhusssein563@gmail.com" class="apc-soc" title="Email">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </a>
+                        <a href="https://wa.me/9647727754500" target="_blank" class="apc-soc" title="WhatsApp">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 8.5-8.5h.5a8.5 8.5 0 0 1 8 8v.5z"/></svg>
+                        </a>
+                        <a href="https://www.instagram.com/n0x.lil1th?igsh=MWVoM29idW84ZDFxNA%3D%3D&utm_source=qr" target="_blank" class="apc-soc" title="Instagram">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+                        </a>
+                        <a href="https://www.facebook.com" target="_blank" class="apc-soc" title="Facebook">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Bio + stats -->
+                <div class="about-bio-col">
+                    <div class="about-bio-text">
+                        <h3 class="about-bio-heading">Developer. Consultant. Creator.</h3>
+                        <p>I'm a results-driven <strong>Web &amp; Flutter Developer</strong> and <strong>IT Consultant</strong> with 3+ years of hands-on experience building high-performance digital products. I bridge technology and real business goals —
+                            from pixel-perfect interfaces to solid back-end systems.</p>
+                        <p>I hold a <strong>Bachelor's degree in IT / Computer Science</strong>, giving me a strong foundation in algorithms, software engineering, and system design.</p>
+                    </div>
+
+                    <!-- Stat chips -->
+                    <div class="about-chips">
+                        <div class="about-chip">
+                            <span class="chip-num">3+</span>
+                            <span class="chip-lbl">Years Exp.</span>
+                        </div>
+                        <div class="about-chip">
+                            <span class="chip-num">20+</span>
+                            <span class="chip-lbl">Projects</span>
+                        </div>
+                        <div class="about-chip">
+                            <span class="chip-num">2</span>
+                            <span class="chip-lbl">Stacks</span>
+                        </div>
+                        <div class="about-chip">
+                            <span class="chip-num">B.Sc.</span>
+                            <span class="chip-lbl">CS Degree</span>
+                        </div>
+                    </div>
+
+                    <!-- Info rows -->
+                    <div class="about-info-rows">
+                        <div class="air-row">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--pink)" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            <span class="air-key">Location</span>
+                            <span class="air-sep">—</span>
+                            <span class="air-val">Iraq</span>
+                        </div>
+                        <div class="air-row">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--pink)" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                            <span class="air-key">Degree</span>
+                            <span class="air-sep">—</span>
+                            <span class="air-val">B.Sc. IT / Computer Science</span>
+                        </div>
+                        <div class="air-row">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--pink)" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                            <span class="air-key">Role</span>
+                            <span class="air-sep">—</span>
+                            <span class="air-val">IT Consultant &amp; Developer</span>
+                        </div>
+                        <div class="air-row">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--pink)" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            <span class="air-key">Since</span>
+                            <span class="air-sep">—</span>
+                            <span class="air-val">2021 to Present</span>
+                        </div>
+                        <div class="air-row">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--pink)" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                            <span class="air-key">Stack</span>
+                            <span class="air-sep">—</span>
+                            <span class="air-val">Web + Flutter</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── ROW 2: Bash terminal (compact, full-width) ── -->
+            <div class="bash-window reveal" id="bashWindow">
+                <div class="bash-titlebar">
+                    <div class="bash-dots">
+                        <span class="bdot bdot-red"></span>
+                        <span class="bdot bdot-yellow"></span>
+                        <span class="bdot bdot-green"></span>
+                    </div>
+                    <span class="bash-title">rayan@portfolio: ~/about_me.sh — profile loader</span>
+                    <button class="bash-replay-btn" id="bashReplay">&#8635; replay</button>
+                </div>
+                <div class="bash-body" id="bashBody">
+                    <div class="bash-init-line">
+                        <span class="bt-prompt">rayan@portfolio</span><span class="bt-colon">:</span><span class="bt-path">~/about</span><span class="bt-dollar">$</span>
+                        <span class="bt-cursor" id="initCursor"></span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+        <div class="section-wrapper">
+            <div class="section-header reveal">
+                <span class="section-tag">// 02 — Abilities</span>
+                <h2 class="section-title">My <span>Skills</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card reveal">
+                    <div class="skill-card-glow"></div>
+                    <div class="skill-icon-3d">
+                        <div class="skill-icon-face"><svg width="32" height="32" viewBox="0 0 128 128"><path fill="#E44D26" d="M19 114L9 2h110l-10 112-45 12z"/><path fill="#F16529" d="M64 117l36-10 9-96H64z"/><path fill="#EBEBEB" d="M64 52H46l-2-14H64V25H29l4 41H64zm0 36l-16-4-1-11H34l2 22 28 8z"/><path fill="#fff" d="M64 52v14h17l-2 18-15 4v14l28-8 4-42z"/></svg></div>
+                    </div>
+                    <h3>Web Development</h3>
+                    <div class="skill-tags"><span class="skill-tag">HTML5</span><span class="skill-tag">CSS3</span><span class="skill-tag">JavaScript</span><span class="skill-tag">React</span><span class="skill-tag">Node.js</span></div>
+                    <div class="skill-bar-row"><span class="skill-percent">90%</span>
+                        <div class="skill-bar">
+                            <div class="skill-bar-fill" data-width="90"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card reveal">
+                    <div class="skill-card-glow"></div>
+                    <div class="skill-icon-3d">
+                        <div class="skill-icon-face"><svg width="32" height="32" viewBox="0 0 128 128"><path fill="#54C5F8" d="M12 64C12 49 18 35 28 25L10 6C-3 19-10 41-10 64s7 45 20 58l19-19C18 93 12 79 12 64z"/><path fill="#01579B" d="M64 12c15 0 29 6 39 16L122 9C109-3 87-10 64-10S19-3 6 10l19 19C35 18 49 12 64 12z"/><path fill="#29B6F6" d="M64 116c-15 0-29-6-39-16L6 118C19 131 41 138 64 138s45-7 58-20l-19-19C93 109 79 116 64 116z"/><path fill="#0288D1" d="M116 64c0 15-6 29-16 39l19 19C131 109 138 87 138 64S131 19 118 6l-19 19c10 10 16 24 17 39z"/><circle fill="white" cx="64" cy="64" r="28"/></svg></div>
+                    </div>
+                    <h3>Flutter Development</h3>
+                    <div class="skill-tags"><span class="skill-tag">Flutter</span><span class="skill-tag">Dart</span><span class="skill-tag">Firebase</span><span class="skill-tag">REST APIs</span></div>
+                    <div class="skill-bar-row"><span class="skill-percent">85%</span>
+                        <div class="skill-bar">
+                            <div class="skill-bar-fill" data-width="85"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card reveal">
+                    <div class="skill-card-glow"></div>
+                    <div class="skill-icon-3d">
+                        <div class="skill-icon-face"><svg width="32" height="32" viewBox="0 0 128 128"><path fill="#F7DF1E" d="M1 1h126v126H1z"/><path fill="#323330" d="M116 97c-1-6-5-11-16-15-4-2-8-3-9-6-1-2-1-3 0-4 1-3 5-4 8-3 2 1 4 2 5 5l9-6c-1-2-2-3-3-4-3-4-8-5-15-5l-4 1c-3 1-7 3-9 5-6 7-4 18 3 23 7 6 18 7 19 12 1 6-4 8-10 7-4-1-7-3-9-6l-10 5c1 2 2 4 4 5 6 6 16 8 26 6 10-2 16-9 15-19zm-49 0c-2-8-8-11-17-15-3-1-6-3-7-5-1-2 0-3 0-4 1-3 6-4 8-3 2 1 4 2 5 4l8-5c-1-2-2-3-3-4-3-3-8-5-14-5l-4 1c-4 1-7 3-9 5-6 6-4 18 3 23 7 5 17 6 19 11 1 6-4 8-10 7-4-1-6-3-9-6l-9 5c1 2 2 4 4 5 6 6 16 8 26 6 10-2 16-9 15-19z"/></svg></div>
+                    </div>
+                    <h3>JavaScript / React</h3>
+                    <div class="skill-tags"><span class="skill-tag">ES6+</span><span class="skill-tag">React</span><span class="skill-tag">Next.js</span><span class="skill-tag">TypeScript</span></div>
+                    <div class="skill-bar-row"><span class="skill-percent">87%</span>
+                        <div class="skill-bar">
+                            <div class="skill-bar-fill" data-width="87"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card reveal">
+                    <div class="skill-card-glow"></div>
+                    <div class="skill-icon-3d">
+                        <div class="skill-icon-face"><svg width="32" height="32" viewBox="0 0 24 24" fill="none"><rect x="2" y="3" width="20" height="14" rx="2" stroke="#ff2d78" stroke-width="1.5"/><path d="M8 21h8M12 17v4" stroke="#ff2d78" stroke-width="1.5" stroke-linecap="round"/><path d="M7 8l2 2 4-4" stroke="#ff2d78" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+                    </div>
+                    <h3>IT Consulting</h3>
+                    <div class="skill-tags"><span class="skill-tag">System Analysis</span><span class="skill-tag">Tech Strategy</span><span class="skill-tag">Architecture</span></div>
+                    <div class="skill-bar-row"><span class="skill-percent">88%</span>
+                        <div class="skill-bar">
+                            <div class="skill-bar-fill" data-width="88"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card reveal">
+                    <div class="skill-card-glow"></div>
+                    <div class="skill-icon-3d">
+                        <div class="skill-icon-face"><svg width="32" height="32" viewBox="0 0 128 128"><path fill="#1572B6" d="M19 114L9 1h110L109 114l-45 13z"/><path fill="#33A9DC" d="M64 117l37-10 9-96H64z"/><path fill="#fff" d="M64 51h18l1-14H64V23h35l-4 42H64zm0 35l-15-4-1-13H34l2 23 28 8z"/><path fill="#EEE" d="M82 65H64v14h16l-2 17-14 4v14l28-8 2-41z"/></svg></div>
+                    </div>
+                    <h3>CSS / Animations</h3>
+                    <div class="skill-tags"><span class="skill-tag">CSS3</span><span class="skill-tag">SASS</span><span class="skill-tag">Tailwind</span><span class="skill-tag">Framer</span></div>
+                    <div class="skill-bar-row"><span class="skill-percent">91%</span>
+                        <div class="skill-bar">
+                            <div class="skill-bar-fill" data-width="91"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card reveal">
+                    <div class="skill-card-glow"></div>
+                    <div class="skill-icon-3d">
+                        <div class="skill-icon-face"><svg width="32" height="32" viewBox="0 0 128 128"><path fill="#F34F29" d="M125 58L70 3c-3-3-8-3-11 0L47 15l15 15c3-1 7 0 10 2 3 3 3 7 2 10l14 14c3-1 7 0 10 2 4 4 4 10 0 14s-10 4-14 0c-3-3-3-7-2-11L69 48v39c1 1 2 1 3 2 4 4 4 10 0 14s-10 4-14 0-4-10 0-14l3-2V48l-3-2c-3-3-4-7-2-11L41 21 3 59c-3 3-3 8 0 11l55 55c3 3 8 3 11 0l55-55c3-3 3-8 1-12z"/></svg></div>
+                    </div>
+                    <h3>Git & DevOps</h3>
+                    <div class="skill-tags"><span class="skill-tag">Git</span><span class="skill-tag">GitHub</span><span class="skill-tag">VS Code</span><span class="skill-tag">Linux</span></div>
+                    <div class="skill-bar-row"><span class="skill-percent">82%</span>
+                        <div class="skill-bar">
+                            <div class="skill-bar-fill" data-width="82"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card reveal">
+                    <div class="skill-card-glow"></div>
+                    <div class="skill-icon-3d">
+                        <div class="skill-icon-face"><svg width="32" height="32" viewBox="0 0 24 24" fill="none"><ellipse cx="12" cy="5" rx="9" ry="3" stroke="#ff2d78" stroke-width="1.5"/><path d="M3 5v4c0 1.66 4 3 9 3s9-1.34 9-3V5" stroke="#ff2d78" stroke-width="1.5"/><path d="M3 9v4c0 1.66 4 3 9 3s9-1.34 9-3V9" stroke="#ff2d78" stroke-width="1.5"/><path d="M3 13v4c0 1.66 4 3 9 3s9-1.34 9-3v-4" stroke="#ff2d78" stroke-width="1.5"/></svg></div>
+                    </div>
+                    <h3>Databases</h3>
+                    <div class="skill-tags"><span class="skill-tag">MySQL</span><span class="skill-tag">MongoDB</span><span class="skill-tag">Firebase</span><span class="skill-tag">PHP</span></div>
+                    <div class="skill-bar-row"><span class="skill-percent">78%</span>
+                        <div class="skill-bar">
+                            <div class="skill-bar-fill" data-width="78"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card reveal">
+                    <div class="skill-card-glow"></div>
+                    <div class="skill-icon-3d">
+                        <div class="skill-icon-face"><svg width="32" height="32" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#ff2d78" stroke-width="1.5"/><path d="M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z" stroke="#ff2d78" stroke-width="1.5"/><path d="M2 12h20" stroke="#ff2d78" stroke-width="1.5"/></svg></div>
+                    </div>
+                    <h3>UI / UX Design</h3>
+                    <div class="skill-tags"><span class="skill-tag">Figma</span><span class="skill-tag">Wireframing</span><span class="skill-tag">Prototyping</span></div>
+                    <div class="skill-bar-row"><span class="skill-percent">80%</span>
+                        <div class="skill-bar">
+                            <div class="skill-bar-fill" data-width="80"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+        <div class="section-wrapper">
+            <div class="section-header reveal">
+                <span class="section-tag">// 03 — Journey</span>
+                <h2 class="section-title">Experience &amp; <span>Education</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div><span class="timeline-date">2022 — Present</span>
+                    <h3>IT Consultant</h3>
+                    <h4>Freelance / Various Clients</h4>
+                    <p>Strategic technology consulting, system analysis, digital transformation, and architecture for multiple business clients.</p>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-dot"></div><span class="timeline-date">2021 — Present</span>
+                    <h3>Flutter Developer</h3>
+                    <h4>Mobile Application Development</h4>
+                    <p>Building cross-platform mobile apps with Flutter &amp; Dart. Firebase, REST APIs, custom animations, pixel-perfect UI.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div><span class="timeline-date">2021 — Present</span>
+                    <h3>Web Developer</h3>
+                    <h4>Full-Stack Projects</h4>
+                    <p>Full-stack: HTML, CSS, JavaScript, React, Node.js, PHP. Responsive design, performance optimization, API integration.</p>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-dot"></div><span class="timeline-date">Graduated</span>
+                    <h3>B.Sc. IT / Computer Science</h3>
+                    <h4>University Degree</h4>
+                    <p>4-year Bachelor's in IT / CS — algorithms, software engineering, networking, databases, systems design.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="section-wrapper">
+            <div class="section-header reveal">
+                <span class="section-tag">// 04 — Get In Touch</span>
+                <h2 class="section-title">Contact <span>Me</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-grid">
+                <div>
+                    <div class="contact-info reveal">
+                        <h3>Let's Build Something Great</h3>
+                        <p>Have a project in mind? Want to collaborate? Reach out — I'm always open to new challenges.</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/n0x.lil1th?igsh=MWVoM29idW84ZDFxNA%3D%3D&utm_source=qr" target="_blank" class="social-link reveal">
+                            <div class="social-icon-3d si-instagram"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1.5" fill="white" stroke="none"/></svg></div>
+                            <div class="social-info"><span class="social-name">Instagram</span><span class="social-handle">n0x.lil1th</span></div><span class="social-arrow">→</span></a>
+                        <a href="https://www.facebook.com/share/1HPSqHSvCe/?mibextid=wwXIfr" target="_blank" class="social-link reveal">
+                            <div class="social-icon-3d si-facebook"><svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></div>
+                            <div class="social-info"><span class="social-name">Facebook</span><span class="social-handle">Rayan Hussein</span></div><span class="social-arrow">→</span></a>
+                        <a href="https://wa.me/9647727754500" target="_blank" class="social-link reveal">
+                            <div class="social-icon-3d si-whatsapp"><svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8v.5z"/></svg></div>
+                            <div class="social-info"><span class="social-name">WhatsApp</span><span class="social-handle">+964 772 775 4500</span></div><span class="social-arrow">→</span></a>
+                        <a href="mailto:rayanhusssein563@gmail.com" class="social-link reveal">
+                            <div class="social-icon-3d si-email"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+                            <div class="social-info"><span class="social-name">Email</span><span class="social-handle">rayanhusssein563@gmail.com</span></div><span class="social-arrow">→</span></a>
+                    </div>
+                </div>
+                <div class="reveal">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group"><label class="form-label">Name</label><input type="text" placeholder="Your name" required/></div>
+                        <div class="form-group"><label class="form-label">Email</label><input type="email" placeholder="your@email.com" required/></div>
+                        <div class="form-group"><label class="form-label">Subject</label><input type="text" placeholder="Project discussion..." required/></div>
+                        <div class="form-group"><label class="form-label">Message</label><textarea placeholder="Tell me about your project..." required></textarea></div>
+                        <button type="submit" class="btn btn-primary btn-submit">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            SEND MESSAGE
+          </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Crafted with <span>♥</span> by <span>Rayan Hussein</span> &nbsp;|&nbsp; <span>Web</span> &amp; <span>Flutter</span> Developer &nbsp;|&nbsp; © 2024</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
