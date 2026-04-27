@@ -7,8 +7,8 @@
 /* ─── VARIABLES ─── */
 
 :root {
-    --pink: #9f45b0;
-    --pink-light: #e54ed0;
+    --pink: #AE2448;
+    --pink-light: #AE2448;
     --pink-dark: #6a2d78;
     --black: #000000;
     --black-2: #0a0a0a;
@@ -18,8 +18,8 @@
     --gray: #9a7aaa;
     --card-bg: rgba(159, 69, 176, 0.05);
     --border: rgba(159, 69, 176, 0.18);
-    --glow: 0 0 22px rgba(159, 69, 176, 0.45);
-    --glow-s: 0 0 45px rgba(229, 78, 208, 0.75);
+    --glow: 0 0 22px rgba(152, 49, 57, 0.45);
+    --glow-s: 0 0 45 rgb(174, 36, 72);
     --T: cubic-bezier(0.23, 1, 0.32, 1);
     --fd: 'Orbitron', monospace;
     --fb: 'Rajdhani', sans-serif;
